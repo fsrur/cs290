@@ -1,0 +1,140 @@
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       
+  color:#faa549ff;
+  background-color:#373737ff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {
+  background-color: none;
+  padding: 10px;
+  border: 0; 
+  margin: 0;
+  text-align: center;
+}
+nav a {
+  background-color: #1a73e8;
+  color: #eee3c1ff;
+  font-size: 25px;
+  font-weight: normal; 
+  line-height: normal;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+  text-decoration: none; 
+  vertical-align: baseline;
+}
+nav a:hover {
+  background-color: #1b66c9;
+}
+
+/*  ----- Page layout blocks -----  */
+header {
+  text-align: center;
+  background-color: none; 
+  color: #faa549ff;
+  padding: 0;
+  border: 0; 
+  margin: 1px;
+  font-size: 18px; 
+  font-weight: normal; 
+}
+main {
+  background-color: none;
+  color: white;
+  text-align: center;
+  padding: 0;
+  border: 0; 
+}
+article {
+    text-align: center;
+}
+footer {
+  text-align: center;
+  background-color:#151e34ff; 
+  color: #a6b2ebff;
+  padding: 1px;
+  border: 0;
+  margin-top: 20px;
+  font-size: 15px; 
+  font-weight: normal; 
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/*  -----  Typography  ----- */
+p {
+  margin-top: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+} 
+
+/*  ----- Table ----- */
+table {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-collapse: collapse;
+  border: 1px solid;
+  margin-bottom: 50px;
+}
+tr {
+  border: 1px solid;
+  padding: 2px;
+}
+tr:nth-child(even) {
+  background-color: #1f7ea7ff;
+}
+tr:nth-child(odd) {
+  background-color: #080c24ff;
+}
+th {
+  background-color: #306754;
+  border: 1px solid;
+  padding: 2px;
+}
+td {
+  border: 1px solid;
+  padding: 2px;
+}
+
+/*  ----- Form ----- */
+form {
+  margin-bottom: 40px;
+}
+fieldset {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+legend {
+  margin-top: 1px;
+}
+label {
+  display: block;
+  position: relative;
+}
+button {
+    margin-top: 7px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+}
+input {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;;
+    padding: 5px;
+}
+select {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;;
+  padding: 5px;
+}
+
