@@ -1,12 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import { Link, useLocation } from 'react-router-dom';
 
 function Navigation() {
+  const location = useLocation();
+
   return (
     <nav>
-        <Link to="/">Home</Link>
-        <Link to="../add-exercise">Add Exercise</Link>
+        {location.pathname !== '/' && <Link to="/">Home</Link>}
+        {location.pathname !== '/add-exercise' && <Link to="/add-exercise">Add Exercise</Link>}
     </nav>
   );
 }

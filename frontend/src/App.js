@@ -42,10 +42,6 @@ function App() {
             </Route>
           </main>
 
-          <footer>
-            <p>&copy; 2022 Fabiano Srur</p>
-          </footer>
-
       </Router>
     </>
   );

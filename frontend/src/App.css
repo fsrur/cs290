@@ -1,12 +1,12 @@
 /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
 body {       
-  color:#faa549ff;
   background-color:#373737ff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   padding: 0;
   margin: 0;
 }
+
 
 /*  ----- Navigation ----- Override text links for navigation only.  */
 nav {
@@ -15,60 +15,40 @@ nav {
   border: 0; 
   margin: 0;
   text-align: center;
+  margin-bottom: 30px;
 }
+
 nav a {
-  background-color: #1a73e8;
   color: #eee3c1ff;
-  font-size: 25px;
-  font-weight: normal; 
-  line-height: normal;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: 0;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-radius: 4px;
+  font-size: 20px;  
+  font-weight: 400;
   text-decoration: none; 
-  vertical-align: baseline;
+  padding: 10px 15px; 
+  transition: color 0.3s ease; 
 }
+
 nav a:hover {
-  background-color: #1b66c9;
+  color: #73A9AD; 
 }
+
 
 /*  ----- Page layout blocks -----  */
 header {
   text-align: center;
-  background-color: none; 
-  color: #faa549ff;
+  color: #B3C890;
   padding: 0;
   border: 0; 
   margin: 1px;
-  font-size: 18px; 
-  font-weight: normal; 
+  font-size: 18px;
 }
+
 main {
-  background-color: none;
   color: white;
   text-align: center;
   padding: 0;
   border: 0; 
 }
-article {
-    text-align: center;
-}
-footer {
-  text-align: center;
-  background-color:#151e34ff; 
-  color: #a6b2ebff;
-  padding: 1px;
-  border: 0;
-  margin-top: 20px;
-  font-size: 15px; 
-  font-weight: normal; 
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
+
 
 /*  -----  Typography  ----- */
 p {
@@ -78,63 +58,94 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 } 
 
+
 /*  ----- Table ----- */
 table {
-  margin-left: 50%;
-  transform: translateX(-50%);
+  width: 80%; 
+  max-width: 800px;
+  margin: 50px auto;
+  margin-top: 0;
   border-collapse: collapse;
-  border: 1px solid;
-  margin-bottom: 50px;
+  font-size: 16px;
 }
-tr {
-  border: 1px solid;
-  padding: 2px;
+
+
+th, td {
+  padding: 15px;
+  border: 1px solid #f5f5f5;
 }
-tr:nth-child(even) {
-  background-color: #1f7ea7ff;
-}
-tr:nth-child(odd) {
-  background-color: #080c24ff;
-}
+
 th {
-  background-color: #306754;
-  border: 1px solid;
-  padding: 2px;
+  background-color: #73A9AD;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
 }
-td {
-  border: 1px solid;
-  padding: 2px;
+
+@media screen and (max-width: 790px) {
+  th, td {
+    padding: 4px;
+  }
+  th.date {
+    min-width: 100px;
 }
+}
+
 
 /*  ----- Form ----- */
 form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 40px;
-}
-fieldset {
-  margin-left: 50%;
-  transform: translateX(-50%);
-}
-legend {
-  margin-top: 1px;
-}
-label {
-  display: block;
-  position: relative;
-}
-button {
-    margin-top: 7px;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 5px;
-}
-input {
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;;
-    padding: 5px;
-}
-select {
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;;
-  padding: 5px;
+  padding: 20px;
+  padding-top: 0;
 }
 
+fieldset {
+  width: 80%;
+  border: none;
+}
+
+@media (min-width: 770px) {
+  fieldset {
+    max-width: 600px; 
+  }
+}
+
+legend {
+  padding-bottom: 18px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button {
+  font-size: 20px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1666c5;
+}
+
+input, select {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}

@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 
-const API_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://your-app.herokuapp.com'
-  : 'http://localhost:5000';
-
 export const AddExercisePage = () => {
 
     const [name, setName] = useState('');
@@ -37,15 +33,13 @@ export const AddExercisePage = () => {
     return (
         <>
         <article>
-            <h2>Add to the collection</h2>
-            <p>Use the form below to add a new exercise to the database</p>
             <form onSubmit={(e) => { e.preventDefault();}}>
                 <fieldset>
-                    <legend>What exercise are you adding?</legend>
+                    <legend>Add an exercise to the database</legend>
                     <label for="name">Exercise name</label>
                     <input
                         type="text"
-                        placeholder="Exercise name"
+                        placeholder="Ex: Bench Press"
                         value={name}
                         onChange={e => setName(e.target.value)} 
                         id="name" />
@@ -54,14 +48,14 @@ export const AddExercisePage = () => {
                     <input
                         type="number"
                         value={reps}
-                        placeholder="Reps"
+                        placeholder="Ex: 10"
                         onChange={e => setReps(e.target.value)} 
                         id="reps" />
 
                     <label for="weight">Weight</label>
                     <input
                         type="number"
-                        placeholder="Weight"
+                        placeholder="Ex: 80"
                         value={weight}
                         onChange={e => setWeight(e.target.value)} 
                         id="weight" />
@@ -76,7 +70,6 @@ export const AddExercisePage = () => {
                     <label for="date">Date</label>
                     <input
                         type="date"
-                        placeholder="Date"
                         value={date}
                         onChange={e => setDate(e.target.value)} 
                         id="date" />

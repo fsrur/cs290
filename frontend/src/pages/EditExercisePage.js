@@ -2,16 +2,16 @@ import React from 'react';
 import { useHistory } from "react-router-dom";
 import { useState } from 'react';
 
-const API_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://your-app.herokuapp.com'
-  : 'http://localhost:5000';
-
 export const EditExercisePage = ({ exerciseToEdit }) => {
     const [name, setName] = useState(exerciseToEdit.name);
     const [reps, setReps]  = useState(exerciseToEdit.reps);
     const [weight, setWeight] = useState(exerciseToEdit.weight);
     const [unit, setUnit] = useState(exerciseToEdit.unit);
-    const [date, setDate] = useState(exerciseToEdit.date);
+    
+    // Convert the date
+    const dateObject = new Date(exerciseToEdit.date);
+    const formattedDate = dateObject.toISOString().split('T')[0];
+    const [date, setDate] = useState(formattedDate);
     
     const history = useHistory();
 
@@ -42,11 +42,9 @@ export const EditExercisePage = ({ exerciseToEdit }) => {
     return (
         <>
         <article>
-            <h2>Edit an exercise in the collection</h2>
-            <p>Use the from below to update an exercise</p>
             <form onSubmit={(e) => { e.preventDefault();}}>
                 <fieldset>
-                    <legend>What would you like to update?</legend>
+                    <legend>Update the exercise</legend>
                     <label for="name">Exercise name</label>
                     <input
                         type="text"
