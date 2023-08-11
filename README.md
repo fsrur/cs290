@@ -1,4 +1,4 @@
-# exercise - MERN App
+# CS290 - MERN App
 
 ## Introduction
 This is a full stack application that tracks user exercises. It has a front-end built with React to display and manage the data, and a backend built with Express.js, which interacts with a MongoDB database to provide CRUD operations for the exercise data.
