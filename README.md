@@ -16,7 +16,7 @@ This is a full stack application that tracks user exercises. It has a front-end 
 4. Create a **'.env'** file in the root directory of your project. Add the following, replacing 'your_connection_string' with your actual MongoDB connection string: **MONGODB_CONNECT_STRING=your_connection_string**
 
 ## Running the Application
-To start the application, run `npm start` in the project directory. This will start the Express.js server, which will serve the API endpoints. The server listens on **'localhost:3000'**.
+To start the application, run `npm start` in the project directory. This will start the Express.js server, which will serve the API endpoints. The server listens on **'localhost:5000'**.
 
 ## Usage
 
