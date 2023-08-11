@@ -4,7 +4,7 @@
 This is a full stack application that tracks user exercises. It has a front-end built with React to display and manage the data, and a backend built with Express.js, which interacts with a MongoDB database to provide CRUD operations for the exercise data.
 
 ## Prerequisites
-- Node.js (version 14 or above)
+- Node.js
 - MongoDB
 - React.js
 - Express.js
