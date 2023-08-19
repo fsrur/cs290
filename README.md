@@ -13,7 +13,9 @@ This is a full stack application that tracks user exercises. It has a front-end 
 1. Clone this repository.
 2. Navigate into the repository in your terminal.
 3. Run `npm install` to install the required packages.
-4. Create a **'.env'** file in the root directory of your project. Add the following, replacing 'your_connection_string' with your actual MongoDB connection string: **MONGODB_CONNECT_STRING=your_connection_string**
+4. Navigate into the frontend directory.
+5. Run `npm install`. After that completes, run `npm run build`.
+6. Create a **'.env'** file in the root directory of your project. Add the following, replacing 'your_connection_string' with your actual MongoDB connection string: **MONGODB_CONNECT_STRING=your_connection_string**
 
 ## Running the Application
 To start the application, run `npm start` in the project directory. This will start the Express.js server, which will serve the API endpoints. The server listens on **'localhost:5000'**.
