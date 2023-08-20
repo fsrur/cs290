@@ -69,7 +69,6 @@ table {
   font-size: 16px;
 }
 
-
 th, td {
   padding: 15px;
   border: 1px solid #f5f5f5;
@@ -80,15 +79,6 @@ th {
   color: #333;
   font-weight: bold;
   text-transform: uppercase;
-}
-
-@media screen and (max-width: 790px) {
-  th, td {
-    padding: 4px;
-  }
-  th.date {
-    min-width: 100px;
-}
 }
 
 
@@ -142,10 +132,42 @@ button:hover {
 }
 
 input, select {
+  height: 50px;
   font-size: 20px;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
   width: 100%;
   box-sizing: border-box;
+}
+
+
+/* Smaller screen */
+@media screen and (max-width: 790px) {
+  th, td {
+    padding: 4px;
+  }
+  th.date {
+    min-width: 100px;
+}
+}
+
+@media screen and (max-width: 410px) {
+  header {
+    font-size: 14px;
+  }
+  th, td {
+    font-size: 11px;
+  }
+  th.date {
+    min-width: 70px;
+  }
+}
+
+
+/* Data input for mobile devices  */
+input[type="date"] {
+  -webkit-appearance: none;  /* for Chrome, Safari */
+  -moz-appearance: none;     /* for Firefox */
+  appearance: none;
 }

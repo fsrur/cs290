@@ -34,9 +34,8 @@ function HomePage({ setExerciseToEdit }) {
             const getResponse = await fetch('/exercises');
             const exercises = await getResponse.json();
             setExercises(exercises);
-            // const newExercises = exercises.filter(m => m._id !== _id);
-            // setExercises(newExercises);
         } else {
+            alert(`Failed to delete exercise.`);
             console.error(`Failed to delete exercise with _id = ${_id}, status code = ${response.status}`)
         }
     }
