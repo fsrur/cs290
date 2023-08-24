@@ -149,10 +149,10 @@ input, select {
   }
   th.date {
     min-width: 100px;
-}
+  }
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 420px) {
   header {
     font-size: 14px;
   }
